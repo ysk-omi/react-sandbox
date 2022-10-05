@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Item from "./Item.jsx";
 
 const Cart = (props) => {
@@ -44,3 +45,8 @@ const Cart = (props) => {
 };
 
 export default Cart;
+
+Cart.propTypes = {
+  items: PropTypes.array.isRequired,
+  removeFromCart: PropTypes.func.isRequired,
+};

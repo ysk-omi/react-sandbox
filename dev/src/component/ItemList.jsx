@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Item from "./Item.jsx";
 
 const ItemList = (props) => {
@@ -22,3 +23,8 @@ const ItemList = (props) => {
 };
 
 export default ItemList;
+
+ItemList.propsTypes = {
+  items: PropTypes.array,
+  addToCart: PropTypes.func,
+};

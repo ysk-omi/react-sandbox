@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 const Item = (props) => {
   const { title, author, desc, price, onClickBtn, btnLabel } = props;
   return (
@@ -15,3 +17,12 @@ const Item = (props) => {
 };
 
 export default Item;
+
+Item.propTypes = {
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  desc: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  onClickBtn: PropTypes.func.isRequired,
+  btnLabel: PropTypes.node.isRequired,
+};

@@ -1,6 +1,7 @@
 import React from "react";
 import ItemList from "./ItemList.jsx";
 import Cart from "./Cart.jsx";
+import PropTypes from "prop-types";
 
 const Container = (props) => {
   const { listItems, cartItems, addToCart, removeFromCart } = props;
@@ -18,3 +19,10 @@ const Container = (props) => {
 };
 
 export default Container;
+
+Container.propTypes = {
+  listItems: PropTypes.array,
+  cartItems: PropTypes.array,
+  addToCart: PropTypes.func,
+  removeFromCart: PropTypes.func,
+};

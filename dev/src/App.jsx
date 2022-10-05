@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./component/Header.jsx";
 import Container from "./component/Container.jsx";
+import PropTypes from "prop-types";
 
 class App extends React.Component {
   constructor() {
@@ -17,7 +18,7 @@ class App extends React.Component {
     const { cartItems } = this.state;
     return (
       <div>
-        <Header></Header>
+        <Header>My Shop</Header>
         <Container
           listItems={listItems}
           cartItems={cartItems}
@@ -40,3 +41,7 @@ class App extends React.Component {
 }
 
 export default App;
+
+App.propTypes = {
+  listItems: PropTypes.array,
+};
